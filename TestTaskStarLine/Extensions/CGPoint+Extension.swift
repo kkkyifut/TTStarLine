@@ -18,19 +18,15 @@ extension CGPoint {
     }
     
     static func - (left: CGPoint, right: CGPoint) -> CGPoint {
-        return CGPoint(x: left.x - right.x, y: left.y - right.y)
+        CGPoint(x: left.x - right.x, y: left.y - right.y)
     }
     
     static func + (left: CGPoint, right: CGPoint) -> CGPoint {
-        return CGPoint(x: left.x + right.x, y: left.y + right.y)
-    }
-    
-    static func * (left: CGPoint, right: CGPoint) -> CGPoint {
-        return CGPoint(x: left.x * right.x, y: left.y * right.y)
+        CGPoint(x: left.x + right.x, y: left.y + right.y)
     }
     
     static func * (point: CGPoint, scalar: CGFloat) -> CGPoint {
-        return CGPoint(x: point.x * scalar, y: point.y * scalar)
+        CGPoint(x: point.x * scalar, y: point.y * scalar)
     }
     
     static func angleBetween3Points(_ a: CGPoint, _ b: CGPoint, _ c: CGPoint) -> CGFloat {
@@ -43,18 +39,17 @@ extension CGPoint {
     static func arcInfo(previous: CGPoint, current: CGPoint, next: CGPoint, radius: CGFloat) -> (center: CGPoint, startAngle: CGFloat, endAngle: CGFloat, clockwise: Bool) {
         let a = previous
         let b = current
-        let bCornerRadius: CGFloat = radius
         let c = next
         
-        let abcAngle: CGFloat = angleBetween3Points(a, b, c)
+        let abcAngle = angleBetween3Points(a, b, c)
         let xbaAngle = (a - b).angle
         let abeAngle = abcAngle / 2
         
-        let deLength: CGFloat = bCornerRadius
-        let bdLength = bCornerRadius / tan(abeAngle)
+        let deLength = radius
+        let bdLength = radius / tan(abeAngle)
         let beLength = sqrt(deLength*deLength + bdLength*bdLength)
         
-        let beVector: CGPoint = CGPoint(angle: abcAngle/2 + xbaAngle)
+        let beVector = CGPoint(angle: abcAngle/2 + xbaAngle)
         
         let e: CGPoint = b + beVector * beLength
         

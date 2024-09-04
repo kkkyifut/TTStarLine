@@ -116,7 +116,6 @@ class GearView: UIView {
 }
 
 extension GearView {
-    
     func addArcs(to path: UIBezierPath, points: [Point]) {
         for i in 0..<points.count {
             let (previous, current, next) = points.items(at: i)
