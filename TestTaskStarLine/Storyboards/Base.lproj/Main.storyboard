@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestTaskStarLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wyK-Zw-JJm">
+                                <rect key="frame" x="16" y="540" width="361" height="262"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Радиус окружности: 15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llC-2V-X8V">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-fh-5Xc">
+                                        <rect key="frame" x="-2" y="28" width="365" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hnc-se-VyF"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Радиус скругления зубцов: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wb3-wW-iGb">
+                                        <rect key="frame" x="0.0" y="68" width="361" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="i1k-C2-4AI">
+                                        <rect key="frame" x="-2" y="96" width="365" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="v0V-0W-UIF"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Высота зубцов: 5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HK3-9s-6Ia">
+                                        <rect key="frame" x="0.0" y="136" width="361" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="a6g-vb-BhS">
+                                        <rect key="frame" x="-2" y="164" width="365" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Th1-fS-erm"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество зубцов: 10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXh-gL-TiT">
+                                        <rect key="frame" x="0.0" y="204" width="361" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="2" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yl5-4Y-tdv">
+                                        <rect key="frame" x="-2" y="232" width="365" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CTF-tw-BS5"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvK-zz-Pd5" customClass="GearView" customModule="TestTaskStarLine" customModuleProvider="target">
+                                <rect key="frame" x="16" y="75" width="361" height="449"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wyK-Zw-JJm" secondAttribute="bottom" constant="16" id="6Jb-0u-dte"/>
+                            <constraint firstItem="wyK-Zw-JJm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DSL-Cb-XfB"/>
+                            <constraint firstItem="wyK-Zw-JJm" firstAttribute="top" secondItem="zvK-zz-Pd5" secondAttribute="bottom" constant="16" id="Ley-TW-lMX"/>
+                            <constraint firstItem="zvK-zz-Pd5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LsJ-1b-KTH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wyK-Zw-JJm" secondAttribute="trailing" constant="16" id="Q52-uz-1p7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zvK-zz-Pd5" secondAttribute="trailing" constant="16" id="d2T-8O-u6b"/>
+                            <constraint firstItem="zvK-zz-Pd5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="kwd-BM-106"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cornerRadiusLabel" destination="Wb3-wW-iGb" id="Oqd-pz-OXa"/>
+                        <outlet property="cornerRadiusSlider" destination="i1k-C2-4AI" id="dRL-Kj-LKd"/>
+                        <outlet property="gearView" destination="zvK-zz-Pd5" id="ytQ-CP-edO"/>
+                        <outlet property="radiusSlider" destination="hYh-fh-5Xc" id="IjX-Mz-cT2"/>
+                        <outlet property="toothCountLabel" destination="nXh-gL-TiT" id="uwn-zV-0nu"/>
+                        <outlet property="toothCountSlider" destination="yl5-4Y-tdv" id="Yg4-rp-9Sn"/>
+                        <outlet property="toothHeightLabel" destination="HK3-9s-6Ia" id="cVe-jM-pzf"/>
+                        <outlet property="toothHeightSlider" destination="a6g-vb-BhS" id="KHn-fh-xJY"/>
+                        <outlet property="toothRadiusLabel" destination="llC-2V-X8V" id="eyQ-ln-anK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.885496183206101" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
