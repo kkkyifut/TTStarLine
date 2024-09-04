@@ -9,7 +9,7 @@ import UIKit
 
 class GearView: UIView {
     
-    typealias Points = [(point: CGPoint, radius: CGFloat)]
+    typealias Point = (point: CGPoint, radius: CGFloat)
     
     private let gridSize: CGFloat = 20.0
     
@@ -52,7 +52,7 @@ class GearView: UIView {
         
         let path = UIBezierPath()
         
-        var points: [(point: CGPoint, radius: CGFloat)] = []
+        var points: [Point] = []
         
         for i in 0..<toothCount {
             let angle = CGFloat(i) * angleStep
@@ -63,7 +63,7 @@ class GearView: UIView {
             points.append( (point: toothTip, radius: cornerRadius) )
         }
         
-        addArcs(to: path, pointsAndRadii: points)
+        addArcs(to: path, points: points)
         
         path.close()
         
@@ -117,9 +117,9 @@ class GearView: UIView {
 
 extension GearView {
     
-    func addArcs(to path: UIBezierPath, pointsAndRadii: [(point: CGPoint, radius: CGFloat)]) {
-        for i in 0..<pointsAndRadii.count {
-            let (previous, current, next) = pointsAndRadii.items(at: i)
+    func addArcs(to path: UIBezierPath, points: [Point]) {
+        for i in 0..<points.count {
+            let (previous, current, next) = points.items(at: i)
             let (center, startAngle, endAngle, clockwise) = CGPoint.arcInfo(
                 previous: previous.point,
                 current: current.point,
